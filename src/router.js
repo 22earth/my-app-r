@@ -1,5 +1,8 @@
-import Hello from '@/views/hello';
-import Child from '@/views/child';
+import loadable from '@loadable/component'
+// import Child from '@/views/child';
+
+const Hello = loadable(() => import('@/views/hello'))
+const Child = loadable(() => import('@/views/child'))
 
 export default [
   {
