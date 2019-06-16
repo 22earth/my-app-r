@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
+    "debug": "react-app-rewired  --nolazy --inspect-brk=9229 start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
