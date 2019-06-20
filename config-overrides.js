@@ -1,9 +1,21 @@
 const path = require('path');
-const { override, addLessLoader, addWebpackAlias } = require('customize-cra');
+const { override, addLessLoader, addWebpackAlias,
+  fixBabelImports } = require('customize-cra');
 
 module.exports = {
   webpack: override(
-    addLessLoader({}),
+    // npm install babel-plugin-import --save-dev
+    // https://github.com/ant-design/create-react-app-antd
+    // useBabelRc(),  // not work 2019-06-20
+    fixBabelImports('import', {
+      libraryName: 'antd',
+      libraryDirectory: 'es',
+      style: true,
+    }),
+    addLessLoader({
+      javascriptEnabled: true,
+      // modifyVars: { '@primary-color': '#1DA57A' }
+    }),
     addWebpackAlias({
       '@': path.join(__dirname, '.', 'src')
     })

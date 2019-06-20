@@ -1,11 +1,12 @@
 import React from 'react';
+import { Button } from 'antd';
 import './App.less';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-          demo
+      <Button type="primary">Button</Button>
       </header>
     </div>
   );
