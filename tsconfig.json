@@ -18,7 +18,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    // new add
     "baseUrl": "./src",
+    "paths": {
+        "@/*": ["*"],
+        "~@/*": ["*"]
+    },
     "experimentalDecorators": true
   },
   "include": [
