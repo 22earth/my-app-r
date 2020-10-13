@@ -1,0 +1,6 @@
+{
+    "prettier.useTabs": false,
+    "prettier.tabWidth": 2,
+    "prettier.singleQuote": true,
+    "prettier.semi": true
+}
